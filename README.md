@@ -1,15 +1,15 @@
-# README Boilerplate
+# Flask Proxy Server
 
-A template of README best practices to make your README simple to understand and easy to use. 
+A proxy server that can be used to forward requests to a Flask application to allow cross-origin requests.
 
 ## Table of Contents
 
-- [Installation](#installation)
+<!-- - [Installation](#installation) -->
 - [Usage](#usage)
-- [Support](#support)
-- [Contributing](#contributing)
+<!-- - [Support](#support) -->
+<!-- - [Contributing](#contributing) -->
 
-## Installation
+<!-- ## Installation
 
 Download to your project directory, add `README.md`, and commit:
 
@@ -17,13 +17,31 @@ Download to your project directory, add `README.md`, and commit:
 curl -LO http://git.io/Xy0Chg
 git add README.md
 git commit -m "Use README Boilerplate"
-```
+``` -->
 
 ## Usage
 
-Replace the contents of `README.md` with your project's:
+`GET /proxy?url=https://httpbin.org/ip`
 
-- Name
+Make a request to the proxy server:
+
+```python
+import requests
+
+response = requests.get('http://localhost:8000/proxy?url=https://httpbin.org/ip')
+
+print(response.json())
+```
+
+```js
+const axios = require('axios');
+
+var response = axios.get('http://localhost:8000/proxy?url=https://httpbin.org/ip');
+
+console.log(response.data);
+```
+
+<!-- - Name
 - Description
 - Installation instructions
 - Usage instructions
@@ -39,4 +57,4 @@ Please [open an issue](https://github.com/fraction/readme-boilerplate/issues/new
 
 ## Contributing
 
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/fraction/readme-boilerplate/compare/).
+Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/fraction/readme-boilerplate/compare/). -->
