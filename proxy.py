@@ -54,11 +54,4 @@ def get_response() -> Response:
     return response
 
 
-@app.route('/proxy/<string:url>', methods=['GET'])
-@cross_origin(supports_credentials=True)
-def get_response_with_url(url: str) -> Response:
-    response: Response = handle_request(url)
-    return response
-
-
 app.run(host='0.0.0.0', port=8000)
