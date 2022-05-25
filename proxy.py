@@ -43,15 +43,17 @@ def handle_request(url: str) -> Response:
 
 @app.route('/', methods=['GET'])
 @cross_origin(supports_credentials=True)
-def get_response():
+def get_response() -> Response:
     url: str = request.args.get('url', type=str, default=None)
-    return handle_request(url)
+    response: Response = handle_request(url)
+    return response
 
 
 @app.route('/<string:url>', methods=['GET'])
 @cross_origin(supports_credentials=True)
-def get_response_with_url(url: str):
-    return handle_request(url)
+def get_response_with_url(url: str) -> Response:
+    response = handle_request(url)
+    return response
 
 
 app.run(host='0.0.0.0', port=8000)
