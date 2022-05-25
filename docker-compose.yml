@@ -6,7 +6,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./volumes
+      - flask-proxy-server:/var/lib/postgresql/data
 
 volumes:
   flask-proxy-server: ~
