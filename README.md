@@ -25,6 +25,7 @@ git commit -m "Use README Boilerplate"
 
 Make a request to the proxy server:
 
+### Python
 ```python
 import requests
 
@@ -33,12 +34,20 @@ response = requests.get('http://localhost:8000/proxy?url=https://httpbin.org/ip'
 print(response.json())
 ```
 
+### ES6 Js
 ```js
-const axios = require('axios');
+import axios from 'axios';
 
-var response = axios.get('http://localhost:8000/proxy?url=https://httpbin.org/ip');
+const getResponse = async () => {
+  var response = await axios.get('https://httpbin.org/ip');
+  return response.data;
+}
 
-console.log(response.data);
+const logData = async () => {
+    console.log(await getResponse())
+}
+
+logData();
 ```
 
 <!-- - Name
