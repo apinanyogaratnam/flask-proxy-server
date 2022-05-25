@@ -6,3 +6,8 @@ services:
     image: flask-proxy-server
     ports:
       - "8000:8000"
+    volumes:
+      - ./volumes
+
+volumes:
+  flask-proxy-server: ~
