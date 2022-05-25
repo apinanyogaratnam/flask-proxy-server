@@ -11,6 +11,9 @@ build:
 run:
 	docker run -d -p 8000:8000 ${IMAGE}
 
+up:
+	docker-compose up
+
 exec:
 	docker exec -it $(sha) /bin/sh
 
