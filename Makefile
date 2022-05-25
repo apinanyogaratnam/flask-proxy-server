@@ -2,6 +2,9 @@ IMAGE := flask-proxy-server
 VERSION := 0.0.1
 REGISTRY_URL := ghcr.io/apinanyogaratnam/${IMAGE}:${VERSION}
 
+start:
+	python3 proxy.py
+
 build:
 	docker build -t ${IMAGE} .
 
