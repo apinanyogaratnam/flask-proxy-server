@@ -21,8 +21,8 @@ git commit -m "Use README Boilerplate"
 
 ## Usage
 
-`GET /proxy?url=https://httpbin.org/ip`
-`POST /proxy?url=https://httpbin.org/ip`
+`GET /proxy?url=https://httpbin.org/ip` <br />
+`POST /proxy?url=https://httpbin.org/ip` <br />
 Body:
 ```json
 {"name": "apinanyogaratnam"}
